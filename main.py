@@ -1,70 +1,35 @@
-import random
+"""
+Module 3: Main Program
+Rock-Paper-Scissors Project
 
-# Display game rules
-print("Welcome to Rock-Paper-Scissors!\n")
-print("Winning Rules:")
-print("Rock vs Paper -> Paper wins")
-print("Rock vs Scissors -> Rock wins")
-print("Paper vs Scissors -> Scissors wins\n")
+This module connects Module 1 and Module 2 and controls
+the complete game workflow.
+"""
 
-choices = ["Rock", "Paper", "Scissors"]
+from module1_input import display_rules, get_user_choice, get_replay_choice
+from module2_game_logic import play_round
 
-while True:
 
-    print("Choose an option:")
-    print("1 - Rock")
-    print("2 - Paper")
-    print("3 - Scissors")
+def main():
+    """Run the Rock-Paper-Scissors game."""
+    display_rules()
 
-    # Validate user input
-    try:
-        choice = int(input("Enter your choice: "))
-    except ValueError:
-        print("Please enter a valid number.\n")
-        continue
-
-    while choice < 1 or choice > 3:
-        choice = int(input("Please enter a valid choice (1-3): "))
-
-    # User choice
-    user_choice = choices[choice - 1]
-
-    print("\nUser choice is:", user_choice)
-    print("Now it's Computer's Turn...")
-
-    # Computer choice
-    comp_choice = random.randint(1, 3)
-    computer_choice = choices[comp_choice - 1]
-
-    print("Computer choice is:", computer_choice)
-    print(user_choice, "vs", computer_choice)
-
-    # Determine winner
-    if choice == comp_choice:
-        print("<== It's a Tie! ==>")
-
-    elif (
-        (choice == 1 and comp_choice == 3) or
-        (choice == 2 and comp_choice == 1) or
-        (choice == 3 and comp_choice == 2)
-    ):
-        print("<== User Wins! ==>")
-
-    else:
-        print("<== Computer Wins! ==>")
-
-    # Play again
     while True:
-        ans = input("\nDo you want to play again? (Y/N): ").lower()
+        user_choice = get_user_choice()
 
-        if ans in ['y', 'n']:
+        # Restart the input step if the user enters non-numeric input.
+        if user_choice is None:
+            continue
+
+        play_round(user_choice)
+
+        ans = get_replay_choice()
+
+        if ans == "n":
             break
 
-        print("Please enter Y or N.")
+        print()
 
-    if ans == 'n':
-        break
 
-    print()
-
-print("\nThanks for playing!")
+if __name__ == "__main__":
+    main()
