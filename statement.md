@@ -1,56 +1,67 @@
 # Project Statement
 
-## Rock-Paper-Scissors Game
+# Rock-Paper-Scissors Game
 
-### Problem Statement
+## 1. Problem Statement
 
-Develop a Python-based Rock-Paper-Scissors game in which the user plays against the computer.
+The objective of this project is to develop a simple and interactive **Rock-Paper-Scissors game using Python**.
 
-The program should allow the user to select one of three choices:
+The system allows a user to play against the computer by selecting one of three choices:
 
 1. Rock
 2. Paper
 3. Scissors
 
-The computer should randomly generate its choice. The program must compare the user's choice with the computer's choice and determine whether the user wins, the computer wins, or the game ends in a tie.
+The computer randomly selects one of the three choices. The program compares the user's choice with the computer's choice and determines the result as a **User Win, Computer Win, or Tie**.
 
-### Requirements
+The system should also validate user input, handle invalid entries without crashing, and allow the user to play multiple rounds.
 
-The program should:
+---
 
-- Display the rules of the game.
-- Provide options for Rock, Paper, and Scissors.
-- Accept the user's choice as input.
-- Validate the user's input.
-- Generate the computer's choice randomly.
-- Compare the user's choice with the computer's choice.
-- Display the result of each round.
-- Identify a win, loss, or tie.
-- Ask the user whether they want to play again.
-- Handle invalid inputs without crashing.
-- Display a thank-you message when the user exits the game.
+## 2. Scope of the Project
 
-### Winning Conditions
+The scope of this project includes the development of a command-line based Rock-Paper-Scissors game.
 
-The winning conditions are:
+The project covers:
 
-- Rock beats Scissors.
-- Scissors beats Paper.
-- Paper beats Rock.
-- If both choices are the same, the result is a tie.
+- Displaying the rules of the game.
+- Providing Rock, Paper, and Scissors as choices.
+- Accepting input from the user.
+- Validating user input.
+- Generating a random choice for the computer.
+- Comparing the user's choice with the computer's choice.
+- Determining the winner.
+- Detecting a tie.
+- Allowing the user to play multiple rounds.
+- Providing error handling for invalid input.
+- Organizing the program into separate Python modules.
 
-### Objective
+The project is designed as a standalone Python application and does not require a database or external services.
 
-The main objective of this project is to develop a simple and interactive Python game while applying fundamental programming concepts such as:
+---
 
-- Variables
-- Lists
-- Loops
-- Conditional statements
-- Exception handling
-- User input
-- Random number generation
+## 3. Target Users
 
-### Expected Outcome
+The target users of this project are:
 
-The final program should provide an interactive Rock-Paper-Scissors game where the user can compete against the computer, receive the result of each round, and continue playing until they choose to exit.
+- Students learning Python programming.
+- Beginners learning basic programming concepts.
+- Users who want to play a simple command-line game.
+- Students studying loops, functions, conditional statements, lists, exception handling, and modular programming.
+
+---
+
+## 4. High-Level Features
+
+### 4.1 Game Setup
+
+The system displays the game title and winning rules before starting the game.
+
+### 4.2 User Input
+
+The user can select:
+
+```text
+1 - Rock
+2 - Paper
+3 - Scissors
