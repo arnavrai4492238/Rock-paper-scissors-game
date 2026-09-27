@@ -1,68 +1,105 @@
-# Rock-paper-scissors-game
 # Rock-Paper-Scissors Game
 
-## 📌 Description
+## 1. Project Overview
 
-This is a simple Rock-Paper-Scissors game developed using Python. The player plays against the computer, which randomly selects Rock, Paper, or Scissors.
+Rock-Paper-Scissors is a simple command-line game developed using Python.
 
-The program determines the winner based on the standard Rock-Paper-Scissors rules.
+In this game, the user plays against the computer. The user selects one of three options:
 
-## 🎯 Objective
+1. Rock
+2. Paper
+3. Scissors
 
-The objective of this project is to create an interactive game while demonstrating basic Python programming concepts such as:
+The computer randomly selects one option, and the program compares both choices to determine whether the user wins, the computer wins, or the result is a tie.
 
-- Variables and data types
-- Lists
-- Conditional statements
-- While loops
-- Exception handling
-- User input
-- Random number generation
-- Basic game logic
+The project is implemented using a modular structure with three Python files.
 
-## 🕹️ Game Rules
+---
 
-The winning rules are:
+## 2. Problem Statement
 
-- Rock vs Paper → Paper wins
-- Rock vs Scissors → Rock wins
-- Paper vs Scissors → Scissors wins
-- Same choices → Tie
+Develop a Python-based Rock-Paper-Scissors game that allows a user to play against a computer.
 
-## 🛠️ Technologies Used
+The system should:
 
-- Python 3
-- `random` module
-- Command Line / Terminal
+- Accept the user's choice.
+- Generate the computer's choice randomly.
+- Compare the two choices.
+- Determine the winner.
+- Handle invalid input.
+- Allow the user to play multiple rounds.
+- Provide a clear command-line interface.
 
-## 📋 Requirements
+---
 
-To run this project, you need:
+## 3. Objectives
 
-- Python 3.x
-- Any Python-supported IDE or terminal
+The main objectives of this project are:
 
-You can use:
+- To develop an interactive Python-based game.
+- To understand and implement conditional statements.
+- To use loops for repeated gameplay.
+- To use the `random` module.
+- To implement input validation and error handling.
+- To understand modular programming in Python.
+- To divide the program into separate functional modules.
 
-- Visual Studio Code
-- PyCharm
-- IDLE
-- Command Prompt
-- PowerShell
+---
 
-## ▶️ How to Run
+## 4. Features
 
-### Step 1: Clone or Download the Project
+### Game Features
 
-Download the project files to your computer.
+- Rock, Paper, and Scissors choices.
+- Random computer choice.
+- Automatic winner determination.
+- Tie detection.
+- Multiple rounds.
+- Play-again option.
+- Invalid input handling.
+- User-friendly command-line interface.
 
-### Step 2: Open the Project
+### Programming Features
 
-Open the project folder in your preferred Python IDE or terminal.
+- Modular Python structure.
+- Functions for individual tasks.
+- `random` module for computer selection.
+- `try-except` for handling invalid numeric input.
+- Conditional statements for game logic.
+- `while` loops for repeated gameplay.
 
-### Step 3: Run the Program
+---
 
-Run the following command in the terminal:
+## 5. Technologies Used
 
-```bash
-python rock_paper_scissors.py
+| Technology | Purpose |
+|---|---|
+| Python 3 | Main programming language |
+| Random Module | Generates the computer's choice |
+| Command Line | User interface |
+| Git & GitHub | Version control and project submission |
+
+---
+
+## 6. Project Modules
+
+The project is divided into three major modules.
+
+### Module 1: Input and Game Setup
+
+**File:** `module1_input.py`
+
+This module handles:
+
+- Displaying game rules.
+- Storing Rock, Paper, and Scissors.
+- Taking the user's choice.
+- Validating the user's input.
+- Asking whether the user wants to play again.
+
+Main functions:
+
+```python
+display_rules()
+get_user_choice()
+get_replay_choice()
